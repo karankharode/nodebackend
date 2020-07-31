@@ -6,11 +6,12 @@ router.get('/', (req, res) => {
     res.send('Hello World')
 })
 
-router.get('Dashboard', (req,res) => {
+router.get('/dashboard', (req,res) => {
     res.send("dashboard")
 })
 
 router.post('/adduser', actions.addNew)
-// router.post('/authenticate', actions)
+router.post('/authenticate', actions.authenticate)
+router.get('/getinfo', actions.getinfo)
 
 module.exports = router
