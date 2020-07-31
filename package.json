@@ -21,6 +21,7 @@
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
     "ms": "^2.1.2",
+    "node-pre-gyp": "^0.15.0",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
