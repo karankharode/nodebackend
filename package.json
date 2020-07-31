@@ -1,6 +1,9 @@
 {
   "name": "hello",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.6.0"
+  },
   "description": "Authentication sys for flutter",
   "main": "server.js",
   "scripts": {
@@ -10,7 +13,7 @@
   "author": "kk4",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
