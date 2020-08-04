@@ -11,8 +11,24 @@ var userSchema = new Schema({
     password : {
         type: String,
         require: true
-    }
-})
+    },
+    email: {
+        type: String,
+        trim: true,
+        required: true,
+        unique: true
+      },
+      number : {
+        type: String,
+        require: true
+    },
+    
+
+      
+},
+{ timestamps: true }
+
+)
 
 userSchema.pre('save', function (next){
     var user = this;

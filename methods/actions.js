@@ -5,13 +5,15 @@ const { secret } = require('../config/dbconfig')
 
 var functions = {
     addNew : function (req, res){
-        if (!(req.body.name) || !(req.body.password)){
+        if (!(req.body.name) || !(req.body.password) || !(req.body.email) || !(req.body.number)){
             res.json({success: false,msg : 'Enter all fields'})
         }
         else{
             var newUser = User({
                 name: req.body.name,
-                password: req.body.password
+                password: req.body.password,
+                email: req.body.email,
+                number: req.body.number
             });
             newUser.save(function(err, newUser){
                 if(err){
@@ -26,7 +28,7 @@ var functions = {
 
     authenticate: function(req, res){
         User.findOne({
-            name:req.body.name
+            name:req.body.name, email:req.body.email
         }, function(err, user){
             if(err) throw err
             if (!user){
