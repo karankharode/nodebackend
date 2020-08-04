@@ -32,7 +32,14 @@ var functions = {
         }, function(err, user){
             if(err) throw err
             if (!user){
-                res.status(403).send({success: false, msg:"Authentication Failed, User not found"})
+                User.findOne({
+                    email:req.body.name
+                },function(err,user){
+                    if(err) throw err
+                    if(!user){
+                        res.status(403).send({success: false, msg:"Authentication Failed, User not found"})
+                    }
+                })
             }
             else{
                 user.comparePassword(req.body.password,function(err, isMatch){
