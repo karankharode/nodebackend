@@ -6,11 +6,13 @@ var bcrypt = require('bcryptjs')
 var userSchema = new Schema({
     name: {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     password : {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     email: {
         type: String,
@@ -20,7 +22,8 @@ var userSchema = new Schema({
       },
       number : {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     
 
