@@ -27,6 +27,6 @@
     "node-pre-gyp": "^0.15.0",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.1"
   }
 }
